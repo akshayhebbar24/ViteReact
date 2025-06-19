@@ -5,7 +5,18 @@ import PostItem from '../components/PostItem'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+        <p>
+            <strong>Welcome to the Home Page of Nitte!</strong>
+        </p>
+        {posts.length === 0 ? (
+            <p>No posts available.</p>
+        ) : (
+            posts.map(({text,image},index) => (
+            <PostItem key={index} text={text} image={image} />
+            ))
+        )}
+    </div>
   )
 }
 
