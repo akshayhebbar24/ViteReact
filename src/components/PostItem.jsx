@@ -1,8 +1,13 @@
 import React from 'react'
 
-function PostItem() {
+function PostItem(text, image) {
   return (
-    <div>PostItem</div>
+    <div>
+<p>
+        <strong>{text}</strong>
+</p>
+        {image && <img src={image} alt="Post" style={{ maxWidth: '100%', height: 'auto' }} />}
+    </div>
   )
 }
 
