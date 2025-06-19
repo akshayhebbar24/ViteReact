@@ -9,6 +9,8 @@ import About from './pages/About'
 function App() {
   const [posts, setPosts] = useState([])
  const addPost = (post) => {
+  setPosts([...posts, post]);
+  }
   return(
   <BrowserRouter>
   <nav>
